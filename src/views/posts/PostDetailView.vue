@@ -32,6 +32,8 @@ import { useRouter } from 'vue-router';
 import { getPostById, deletePost } from '@/api/posts';
 import { ref } from 'vue';
 
+// js에선 문자열로 날라 올지 숫자로 날라올지 모르기 때문에 반드시 타입을 정한 후
+// 요청을 해야 정상적으로 리턴된다.
 const props = defineProps({
 	id: Number,
 });
@@ -41,11 +43,11 @@ const router = useRouter();
 /**
  * ref
  * 장) 객체 할당 가능
- * 단) form.value.title, form.value.content
+ * 단) form.value.title, form.value.content 와 같이 from.value로 값을 가져와야한다.
  * 장) 일관성
  *
  * reactvie
- * 단) 객체 할당 불가능
+ * 단) 객체 할당 불가능 하나하나 어트리뷰트를 쪼게서 객체에 할당해야한다는 이야기이다.
  * 장) form.title, form.content
  */
 const post = ref({

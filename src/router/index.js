@@ -37,7 +37,7 @@ const routes = [
 		name: 'PostDetail',
 		component: PostDetailView,
 		// props: true,
-		props: route => ({ id: parseInt(route.params.id) }),
+		props: route => ({ id: parseInt(route.params.id) }), // 위와 같이 파라미터를 받고 어떤 타입으로 받을건지 선언
 	},
 	{
 		path: '/posts/:id/edit',
