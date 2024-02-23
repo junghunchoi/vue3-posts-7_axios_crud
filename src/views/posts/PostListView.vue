@@ -70,6 +70,7 @@ const fetchPosts = async () => {
     console.error(error);
   }
 };
+
 watchEffect(fetchPosts); // 데이터가 변경이 되었을 경우 콜백함수를 재실행해 변경된 컴포넌트만 재랜더링한다.
 
 const goPage = (id) => {
